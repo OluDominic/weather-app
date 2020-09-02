@@ -1,0 +1,52 @@
+.location {
+    display: flex;
+    padding: 6px;
+    margin: 4px;
+    border: 0px;
+    border-bottom: 2px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    justify-content: space-between;
+    border-radius: 0;
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+.location:focus {
+    outline: none;
+}
+
+.location-whole {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-wea {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    flex-basis: 110px;
+    height: 50px;
+    cursor: pointer;
+    margin: 4px;
+    border: 1px solid gray;
+    background-color: lightgray;
+    color: #000000;
+    font-family: fantasy;
+    font-size: 14px;
+    margin-top: 25px;
+    border-radius: 2px;
+}
+
+.btn-wea:hover {
+    color: lightgrey;
+    background-color: grey;
+    border: 2px solid black;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
