@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./pexels-brett-sayles-1784679\ \(1\).jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  height: 100%;
 }
 
 code {

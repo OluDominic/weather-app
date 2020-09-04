@@ -30,8 +30,13 @@
     justify-content: center;
     font-family: cursive;
     margin-top: 0px;
+    font-size: 20px;
 }
 
 .cards {
     color: white;
+}
+
+.temp {
+    font-size: 24px;
 }

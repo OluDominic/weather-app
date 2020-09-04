@@ -1,9 +1,11 @@
 import React from 'react';
-//import './App.css';
+import './App.css';
 import 'weather-icons/css/weather-icons.css';
 import Form from "./WeatherForm/form";
 import Forecast from "./Forecast/Forecast";
 import keys from "./keys"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 
 const api = {
   key: keys.API_KEY
@@ -18,9 +20,9 @@ class App extends React.Component {
     date: new Date().toLocaleString(),
     icon: undefined,
     main:undefined, 
-    celcius: undefined, 
-    min_temp: undefined, 
-    max_temp: undefined,
+    celsius: undefined, 
+    temp_max: undefined, 
+    temp_min: undefined,
     description: "",
     error: false};
     this.weatherIcon= {
@@ -35,7 +37,7 @@ class App extends React.Component {
   }
   
 
-  calCelcius(temp) {
+  calCelsius(temp) {
     let cell = Math.floor(temp - 273.15);
     return cell;
   }
@@ -81,9 +83,9 @@ class App extends React.Component {
 
     this.setState({
       city: `${response.name}, ${response.sys.country}`,
-      celcius: this.calCelcius(response.main.temp),
-      min_temp: this.calCelcius(response.main.temp_max),
-      max_temp: this.calCelcius(response.main.temp_min),
+      celsius: this.calCelsius(response.main.temp),
+      temp_min: this.calCelsius(response.main.temp_min),
+      temp_max: this.calCelsius(response.main.temp_max),
       description: response.weather[0].description,
       error: false
     })
@@ -102,15 +104,17 @@ class App extends React.Component {
           />
           <Forecast city={this.state.city} 
           country={this.state.country} 
-          temp_celcius={this.state.celcius}
-          max_temp={this.state.max_temp}
-          min_temp={this.state.min_temp}
+          temp_celsius={this.state.celsius}
+          temp_max={this.state.temp_max}
+          temp_min={this.state.temp_min}
           description={this.state.description}
           weatherIcon={this.state.icon}
           date={this.state.date} />
         </main>
-        <footer>
-          Page created by Dominic
+        <footer className="foot">
+          Page created by Dominic <span>
+            <FontAwesomeIcon icon={faCopyright} />
+          </span> 2020.
         </footer>
       </div>
       );

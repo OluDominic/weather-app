@@ -16,6 +16,10 @@
     outline: none;
 }
 
+.location::-webkit-input-placeholder {
+    color: rgb(163, 158, 148);
+}
+
 .location-whole {
     display: flex;
     flex-direction: row;
