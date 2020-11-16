@@ -40,3 +40,29 @@
 .temp {
     font-size: 24px;
 }
+
+@media all and (max-width: 450px) {
+    .wea-city {
+        display: flex;
+        flex-direction: column;
+        font-size: 100%;
+    }
+
+    .wea-date {
+        font-size: 100%;
+    }
+
+    .temp {
+        font-size: 100%;
+        margin-top: 0;
+    }
+
+    .py-3 {
+        font-size: 100%;
+    }
+
+    .py-4 {
+        display: flex;
+        margin: 20px;
+    }
+}

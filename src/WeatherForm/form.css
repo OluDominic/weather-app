@@ -35,8 +35,8 @@
     height: 50px;
     cursor: pointer;
     margin: 4px;
-    border: 1px solid gray;
-    background-color: lightgray;
+    border: 2px solid rgb(5, 5, 5);
+    background-color: transparent;
     color: #000000;
     font-family: fantasy;
     font-size: 14px;
@@ -46,11 +46,24 @@
 
 .btn-wea:hover {
     color: lightgrey;
-    background-color: grey;
-    border: 2px solid black;
+    background-color: rgb(73, 72, 72);
+    border: 2px solid rgb(19, 18, 18);
+    transition: all 0.4s ease-in-out;
 }
 
 .btn {
     display: flex;
     justify-content: center;
+}
+
+@media all and (max-width: 450px) {
+    .location-whole {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
 }
